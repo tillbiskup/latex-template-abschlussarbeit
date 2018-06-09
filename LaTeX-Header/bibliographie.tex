@@ -1,0 +1,34 @@
+% Inoffizielle LaTeX-Vorlage für Bachelor-/Masterarbeiten
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
+% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+%% Bibliographie
+% Hinweis: \usepackage[autostyle]{csquotes} sollte vorher geladen werden
+\usepackage[
+	backend=biber,
+    sorting=none,
+    style=numeric-comp,
+    isbn=false,
+    url=false,
+    doi=false,
+    eprint=false,
+    maxnames=10
+]{biblatex}
+\addbibresource{Bibliographie/books.bib}
+\addbibresource{Bibliographie/fulljrnl.bib}
+\addbibresource{Bibliographie/articles.bib}
+
+% Umdefinition mancher Ausgaben im Literaturverzeichnis
+\DeclareFieldFormat[article]{title}{#1\isdot}
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+
+% Flattersatz mit Silbentrennung
+\usepackage[newcommands]{ragged2e}

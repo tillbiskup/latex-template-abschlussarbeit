@@ -1,0 +1,70 @@
+% Inoffizielle LaTeX-Vorlage für Bachelor-/Masterarbeiten
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
+% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+%% Dokumentklasse und Optionen
+\documentclass{scrreprt}       % Dokumentklasse aus dem KOMA-Script-Paket
+
+% Einbinden der entsprechenden Header-Dateien
+% aus dem Unterverzeichnis "LaTeX-Header"
+% Die Reihenfolge ist nicht in jedem Fall egal.
+\input{LaTeX-Header/layout}
+\input{LaTeX-Header/sprache}
+\input{LaTeX-Header/typografie}
+
+\usepackage{lipsum}
+\usepackage{layouts}
+
+\input{LaTeX-Header/grafiken}
+\input{LaTeX-Header/mathematik}
+\input{LaTeX-Header/bibliographie}
+
+\input{LaTeX-Header/abkuerzungen}
+
+% In dieser Datei werden die Metadaten für die Titelseite definiert.
+\input{LaTeX-Header/titelseite}
+
+% Das Paket "hyperref" sollte GANZ AM ENDE der Präambel geladen werden.
+\input{LaTeX-Header/hyperref}
+
+\begin{document}
+
+% Die einzelnen Kapitel werden als separate Dateien eingebunden.
+% All diese Dateien liegen im Verzeichnis "Includes".
+
+\include{Includes/titelseite}
+
+\tableofcontents
+
+\include{Includes/abkuerzungen}
+
+\include{Includes/einleitung}
+
+\include{Includes/theorie}
+
+\include{Includes/material_methoden}
+
+\include{Includes/ergebnisse_diskussion}
+
+\include{Includes/zusammenfassung_ausblick}
+
+\include{Includes/danksagung}
+
+\begin{flushleft}
+\printbibliography
+\end{flushleft}
+
+\include{Includes/danksagung}
+
+\appendix
+
+\chapter{Verwendete Programme}
+
+\end{document}

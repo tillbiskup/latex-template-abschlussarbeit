@@ -1,0 +1,21 @@
+% Inoffizielle LaTeX-Vorlage für Bachelor-/Masterarbeiten
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
+% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+\usepackage{amsmath}
+
+% Tensoren: serifenlos, fett, kursiv
+\DeclareMathAlphabet{\mathbfsf}{\encodingdefault}{\sfdefault}{bx}{sl}
+\newcommand{\tens}[1]{\mathbfsf{#1}}
+
+% Dirac-Notation
+\newcommand*{\bra}[1]{\left\langle#1\right\rvert}
+\newcommand*{\ket}[1]{\left\lvert#1\right\rangle}
+\newcommand*{\braket}[2]{\langle#1\lvert#2\rangle}

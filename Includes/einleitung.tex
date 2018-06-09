@@ -1,0 +1,70 @@
+% Inoffizielle LaTeX-Vorlage für Bachelor-/Masterarbeiten
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
+% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+\chapter{Einleitung}
+
+Dieses Dokument dient aktuell als Versuchsobjekt, um mittels der KOMA-Script-Klasse \texttt{scrreprt} ein Layout zu verwirklichen, das sich für Bachelor- und Masterarbeiten zunächst einmal in der Fakultät für Chemie und Pharmazie der Albert-Ludwigs-Universität Freiburg oder noch konkreter im Institut für Physikalische Chemie eben jener Fakultät eignet.
+
+Der Autor dieser Vorlage ist kein Typograf, dafür aber ein langjähriger passionierter Nutzer von \LaTeX{}, der mit dieser Vorlage seine ersten systematischen Gehversuche bei der Verwendung der KOMA-Script-Klassen macht. Das Dokument entstand parallel zum Kurs \enquote{\LaTeX{} für Naturwissenschaftler: Ansprechender Text- und Formelsatz von Abschlussarbeiten}, den der Autor erstmalig im Sommersemester 2018 gab.
+
+Mitunter ist es sehr hilfreich, einen Überblick über grundsätzliche Parameter und Größen des Satzspiegels zu haben, insbesondere die Zeilenbreite, die einerseits von diversen Einstellungen bis hin zur Schriftgröße abhängt, andererseits aber für die Erstellung von Abbildungen, die unskaliert eingefügt werden sollen, relevant ist. Das Paket \texttt{layouts} stellt hierfür einen entsprechenden Befehl zur Verfügung, dessen Ausgabe nachfolgend wiedergegeben wird.
+
+\begin{center}
+\printinunitsof{mm}
+\paragraphvalues
+\end{center}
+
+Nun stellt sich natürlich schon die Frage, warum man denn das Layout einer Abschlussarbeit nicht den betreffenden Kandidatinnen und Kandidaten selbst überlässt. Die Antwort ist mehrgeteilt. Zum Einen ist diese Vorlage, ebenso wie der Kurs, in dessen Kontext sie entstanden ist, lediglich ein Angebot und ein Ausgangspunkt für die eigene Beschäftigung mit \LaTeX{} und seinen Möglichkeiten. Zum Anderen tauchen aus der Erfahrung immer wieder die gleichen Probleme auf, und auch wenn diese Vorlage fern davon ist, die eine gültige Lösung zu präsentieren, so müht sie sich doch, \emph{eine} gangbare Lösung aufzuzeigen, die aus typografischen Gesichtspunkten zumindest vertretbar ist. Dabei werden durchaus Kompromisse eingegangen, insbesondere was Zeilenbreite (eher breit) und Zeilenabstand (leicht vergrößert) angeht, die mit Sicherheit nicht dem Ideal der Typografie für Bücher entsprechen.
+
+Sollte das Projekt erfolgreich sein und alle wesentlichen Aspekte, die in einer typischen Bachelor- und Masterarbeit auftreten, abdecken, wird es vermutlich am Ende in der einen oder anderen Art zur Verfügung gestellt. Wer es dann als \enquote{Rundum-Sorglos-Paket} verwenden möchte, ohne dabei nachzudenken, ist für sein eigenes Unglück verantwortlich. Eingedenk der eigenen Erfahrung, dass derlei Vorlagen ein gewisses Eigenleben entwickeln, sobald sie in irgendeiner Form zur Verfügung gestellt werden, ist in die Erstellung dieses Dokuments eine gewisse Sorgfalt geflossen. Trotzdem übernimmt sein Autor keinerlei Garantie für irgendwelche Ergebnisse oder Folgen.
+
+
+\section{Abschnitt}
+
+\lipsum[1-2]
+
+\begin{figure}[t]
+%\setcaphanging
+\begin{center}
+\includegraphics{unilogo}
+\end{center}
+\caption[Abbildungen haben immer eine Bildunterschrift.]{\textbf{Abbildungen haben immer eine Bildunterschrift.} Außerdem ist es hilfreich, wenn die Bildunterschrift die Abbildung soweit erklärt, dass der geneigte Leser nicht erst noch große Teile des Textes lesen muss, um sie zu verstehen. Kurz: Abbildungen sollten gemeinsam mit ihrer Unterschrift für sich stehen.}
+\label{fig:beispiel}
+\end{figure}
+
+\lipsum[3-4]
+
+
+\section{Weiterer Abschnitt}
+
+\begin{table}[b]
+\caption[Tabellen haben eine Überschrift, keine Unterschrift.]{\textbf{Tabellen haben eine Überschrift, keine Unterschrift.} Dank der exzellenten Konfigurationsoptionen des KOMA-Script-Pakets lässt sich das allerdings komfortabel global definieren, so dass der Abstand unterhalb der Tabellenüberschrift zur Tabelle korrekt ist. Tabellen sollten niemals vertikale und nur wenige horizontale Linien enthalten. Details finden sich in der Dokumentation zum Paket \texttt{booktabs}.}
+\label{tab:beispiel}
+\begin{tabular}{@{\extracolsep{0ex}}ll@{\extracolsep{0ex}}}
+\toprule
+bla & blub
+\\
+\midrule
+foo & bar
+\\
+baz & bla
+\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\lipsum[5-8]
+
+\cite{knut-bams-1-337}
+
+\lipsum[9-13]
+
+\cite{kohm-m-2014,kopka-h-2000,wittgenstein-l-1963}

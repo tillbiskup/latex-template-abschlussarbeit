@@ -1,0 +1,31 @@
+% Inoffizielle LaTeX-Vorlage für Bachelor-/Masterarbeiten
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
+% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+%% Mikrotypografie
+\usepackage{microtype}
+
+%% Anführungszeichen sprachabhängig und "intelligent"
+\usepackage[autostyle]{csquotes}
+
+%% Abbildungsüber- und Tabellenunterschriften
+\addtokomafont{caption}{\small}       % kleinere Schrift
+\addtokomafont{captionlabel}{\textbf} % fette Schrift
+\setcapindent{0ex}                    % Keine hängenden Über-/Unterschriften
+
+%% typografisch korrekte Tabellen
+\usepackage{booktabs}
+\KOMAoptions{captions=tableheading} % Tabellen haben Überschriften
+
+%% Zeilenabstand erhöhen
+\usepackage{setspace}
+\setstretch{1.1}               % geringfügig erhöhter Zeilenabstand
+%\AfterTOCHead{\singlespacing} % vom KOMA-Script-Autor empfohlen, hier ignoriert
+\KOMAoptions{DIV=last}         % WICHTIG: Satzspiegel neu berechnen
