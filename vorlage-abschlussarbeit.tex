@@ -2,8 +2,9 @@
 % an der Fakultät für Chemie und Pharmazie
 % der Albert-Ludwigs-Universität Freiburg
 %
-% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
-% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
 %
 % Jegliche Nutzung auf eigene Verantwortung.
 %
@@ -18,13 +19,10 @@
 \input{LaTeX-Header/layout}
 \input{LaTeX-Header/sprache}
 \input{LaTeX-Header/typografie}
-
-\usepackage{lipsum}
-\usepackage{layouts}
-
 \input{LaTeX-Header/grafiken}
 \input{LaTeX-Header/mathematik}
 \input{LaTeX-Header/bibliographie}
+\input{LaTeX-Header/listings}
 
 \input{LaTeX-Header/abkuerzungen}
 
@@ -32,6 +30,9 @@
 \input{LaTeX-Header/titelseite}
 
 % Das Paket "hyperref" sollte GANZ AM ENDE der Präambel geladen werden.
+% Insbesondere sollten die Definitionen für die Titelseite vorher geladen
+% werden, da Teile dieser Informationen in die Metadaten des PDF-Dokuments
+% übernommen werden.
 \input{LaTeX-Header/hyperref}
 
 \begin{document}
@@ -39,11 +40,25 @@
 % Die einzelnen Kapitel werden als separate Dateien eingebunden.
 % All diese Dateien liegen im Verzeichnis "Includes".
 
+\pagenumbering{roman}
+
 \include{Includes/titelseite}
 
 \tableofcontents
 
+% Kann weggelassen werden
+\listoffigures
+
+% Kann weggelassen werden
+\listoftables
+
+% Kann weggelassen werden
+\lstlistoflistings
+
 \include{Includes/abkuerzungen}
+
+\cleardoublepage
+\pagenumbering{arabic}
 
 \include{Includes/einleitung}
 
@@ -55,16 +70,12 @@
 
 \include{Includes/zusammenfassung_ausblick}
 
-\include{Includes/danksagung}
-
-\begin{flushleft}
-\printbibliography
-\end{flushleft}
-
-\include{Includes/danksagung}
-
 \appendix
 
-\chapter{Verwendete Programme}
+\include{Includes/anhang-header}
+
+\printbibliography[heading=bibintoc]
+
+\include{Includes/danksagung}
 
 \end{document}

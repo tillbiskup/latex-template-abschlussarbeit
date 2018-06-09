@@ -2,12 +2,56 @@
 % an der Fakultät für Chemie und Pharmazie
 % der Albert-Ludwigs-Universität Freiburg
 %
-% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
-% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
 %
 % Jegliche Nutzung auf eigene Verantwortung.
 %
 % Copyright (c) 2018, Till Biskup
 
 \chapter{Zusammenfassung und Ausblick}
+\label{ch:zusammenfassung_ausblick}
+
+Ziel dieser Arbeit war die Erstellung einer \LaTeX{}-Vorlage für Abschlussarbeiten, zunächst ganz spezifisch am Institut für Physikalische Chemie der Albert-Ludwigs-Universität Freiburg, die den Nutzern erlaubt, sich weitestgehend auf die Inhalte der jeweiligen Arbeit zu konzentrieren und sich über ein Mindestmaß hinaus nicht mit Details der Formatierung beschäftigen zu müssen.
+
+
+\section{Zentrale Aspekte des verfolgten Ansatzes}
+
+\paragraph{Vordefinierte Titelseite}
+
+Die Formatierung der Titelseite ist vordefiniert und entspricht den Vorgaben von Seiten der Fakultät und des Prüfungsamtes. Lediglich die Metadaten, also Titel, Autor, akademischer Grad etc. müssen über entsprechende Befehle in der Präambel an den jeweiligen spezifischen Kontext angepasst werden. Das offizielle Logo der Albert-Ludwigs-Universität Freiburg ist ebenfalls Teil der Vorlage und wird entsprechend auf der Titelseite eingebunden.
+
+
+\paragraph{Auslagerung der Kapitel in eigene Dateien}
+
+Jedes Kapitel wird in eine eigene Datei ausgelagert und über den Befehl \command{include} eingebunden. All diese eingebundenen Dateien befinden sich in einem eigenen Verzeichnis, \filename{Includes}, weshalb nur das Hauptdokument und die durch die diversen Kompilierungen erzeugten Hilfs- und Ausgabedateien auf der obersten Ebene übrig bleiben. Das erhöht immens die Übersicht. Darüber hinaus unterstützen moderne \LaTeX{}-Editoren die Definition eines Hauptdokuments, so dass die Kompilierung bequem auch dann erfolgen kann, wenn man gerade eines der Kapitel bearbeitet. Alternativ steht dafür das \filename{Makefile} zur Verfügung, das durch den Aufruf von \command{make} auf der Kommandozeile\footnote{auch als \enquote{Eingabeaufforderung}, \enquote{cmd} oder \enquote{Terminal} bezeichnet} die Kompilierung erlaubt.
+
+
+\paragraph{Aufteilung der Präambel}
+
+Ähnlich wie die Kapitel in einzelne Dateien aufgeteilt wurden, besteht die Präambel ebenfalls aus einzelnen, thematisch unterteilten Dateien. Diese Modularisierung erhöht einerseits die Übersichtlichkeit und erlaubt es andererseits, nur die jeweils notwendigen Aspekte einzubinden. Die Reihenfolge der einzelnen Teile der Präambel sind nicht vollständig beliebig, Hinweise finden sich in der Präambel des Hauptdokuments und in den einzelnen Dateien.
+
+
+
+\section{Ideen für künftige Erweiterungen}
+
+\paragraph{Weitere Beispiele}
+
+Bislang finden sich in diesem Dokument nur relativ wenige konkrete Beispiele, die \LaTeX{}-Quellcode für die Lösung immer wiederkehrender Fragestellungen zur Verfügung stellen. Ohne zu sehr inhaltlich Aspekte vorweg zu nehmen (eine Einführung in die Magnetresonanz als Beispiel für den mathematischen Formelsatz wäre eher wenig sinnvoll), ließe sich hier sicherlich noch manche Ergänzung vornehmen.
+
+
+\paragraph{Detailliertere Hinweise zur Gliederung der Arbeit}
+
+Vielleicht wäre es hilfreich, zu jedem der Kapitel einführend ein wenig zu beschreiben, worauf man sinnvollerweise achten sollte und wie die jeweiligen Kapitel aufgebaut werden können. Das entspräche in Teilen der Verschriftlichung entsprechender Foliensätze des zugrundeliegenden Kurses.
+
+
+\paragraph{Erklärung der einzelnen Layout-Entscheidungen}
+
+Viele der getroffenen Entscheidungen bzgl. des grunsätzlichen Layouts sind das Ergebnis intensiven Nachdenkens seitens seines Autors. Zu einem kleinen Teil finden sich bereits Hinweise dazu im Anhang der Arbeit bei der Auflistung der einzelnen Teile der Präambel. Trotzdem wäre es, vermutlich inbesondere bzgl. der Einstellungen zu Satzspiegel und anderen Elementen, hilfreich, detaillierter zu beschreiben, wie es dazu kam.
+
+
+\paragraph{Dokumentation der von der Vorlage bereitgestellten Strukturen}
+
+Nicht nur die Titelseite ist eine Struktur, die in dieser Form explizit nur von dieser Vorlage bereitgestellt wird. Das betrifft ebenso eine Reihe von Befehlen zur logischen Textauszeichnung im mathematischen Formelsatz und im regulären Textsatz. Eine konkrete Dokumentation dieser Befehle und Strukturen erleichterte mit Sicherheit die Nutzbarkeit der Vorlage.
 

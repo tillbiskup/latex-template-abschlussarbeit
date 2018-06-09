@@ -1,0 +1,53 @@
+% Inoffizielle LaTeX-Vorlage für Bachelor-/Masterarbeiten
+% an der Fakultät für Chemie und Pharmazie
+% der Albert-Ludwigs-Universität Freiburg
+%
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
+%
+% Jegliche Nutzung auf eigene Verantwortung.
+%
+% Copyright (c) 2018, Till Biskup
+
+\chapter{Verwendete Präambel-Dateien}
+\label{ch:anhang-header}
+
+Eine Idee, die bei der Erstellung dieses Dokumentes umgesetzt wurde, ist die Aufteilung nicht nur der einzelnen Kapitel des Inhaltes auf eigene Dateien in einem eigenen Verzeichnis, sondern in gleicher Weise die Aufteilung der Dokumentpräambel. Entsprechend befindet sich im Verzeichnis \filename{LaTeX-Header} eine Reihe von Dateien, die thematisch unterschiedliche Aspekte der Präambel abdecken.
+
+Diese Dateien seien nachfolgend hier dokumentiert. Neben den Kommentaren im Quellcode selbst dienen die jeweiligen Überschriften ebenfalls der weiteren Dokumentation und Beschreibung der jeweils realisierten Ideen.
+
+Der Quellcode dieses Kapitels dient gleichzeitig dazu zu zeigen, wie sich Quellcode von Auswertungsprogrammen einer Abschlussarbeit, die z.B. in der Physikalischen Chemie angefertigt wurde, in einem Anhang in die Arbeit integrieren ließe. Bei dieser Gelegenheit sei noch einmal daran erinnert, dass selbst im Rahmen einer Abschlussarbeit geschriebene Programme, die zur Auswertung der Daten verwendet wurden, aus Gründen der Nachvollziehbarkeit und Reproduzierbarkeit auf jeden Fall archiviert werden müssen. Darüber hinaus ist es ein viel zu selten umgesetzter guter Standard, sie als Anhang in die Abschlussarbeit aufzunehmen.
+
+Noch ein letzter Hinweis: Der Schriftgrad der Quellcode-Listings ist bewusst relativ klein gehalten, um die Zeilen nicht unnötig umbrechen zu müssen. Für Quellcode im Haupttext der Arbeit sollte eine größere Schrift gewählt werden.
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für das allgemeine Layout.]\textbf{\LaTeX{}-Präambel für das allgemeine Layout des Dokuments.} Diese Präambel wird in der Regel als erste im Dokument eingelesen. Die hier vorgenommenen Einstellungen sind das Ergebnis ausführlicher Tests.},label={lst:layout}]{LaTeX-Header/layout}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für die Spracheinstellungen.]\textbf{\LaTeX{}-Präambel für die Spracheinstellungen des Dokuments.} Neben der Definition der Zeichen- und Schriftkodierung für das \LaTeX-Dokument wird die eigentliche Dokumentsprache definiert. Kommen mehrere Sprachen zum Einsatz, sollten sie der Reihe nach dem Paket \package{babel} übergeben werden. In diesem Fall ist die letzte angegebene Sprache die Hauptsprache des Dokuments.},label={lst:sprache}]{LaTeX-Header/sprache}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für typografische Aspekte.]\textbf{\LaTeX{}-Präambel für typografische Aspekte.} Zugegeben sind viele der Einstellungen, die in diesem Teil der Präambel vorgenommen werden, subjektiv und nicht alle unter dem Gesichtspunkt der professionellen Typografie perfekt (insbesondere der etwas erhöhte Zeilenabstand und die Hervorhebung von Absätzen durch Abstand statt Einrückung). Sie haben sich aber für naturwissenschaftliche Abschlussarbeiten bewährt.},label={lst:typografie}]{LaTeX-Header/typografie}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für das Einbinden von Abbildungen.]\textbf{\LaTeX{}-Präambel für das Einbinden von Abbildungen.} Neben dem Einbinden des Pakets \package{graphicx} ist hier insbesondere die Definition der relativen Pfade zu den Abbildungen von Interesse.},label={lst:grafiken}]{LaTeX-Header/grafiken}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für den mathematischen Formelsatz.]\textbf{\LaTeX{}-Präambel für den mathematischen Formelsatz.} Das Paket \package{amsmath} ist für den Formelsatz eigentlich unerlässlich und sollte immer geladen werden, sobald mathematische Formeln gesetzt werden müssen. Die weiteren Aspekte betreffen die zusätzliche Definition von mathematischen Strukturen mit möglichst sprechenden Befehlen, die der logischen Textauszeichnung dienen und die Lesbarkeit des \LaTeX{}-Quelltextes entsprechend erhöhen.},label={lst:mathematik}]{LaTeX-Header/mathematik}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für die Bibliographie.]\textbf{\LaTeX{}-Präambel für die Bibliographie.} Hier werden sowohl allgemeine Einstellungen des Paketes \package{biblatex} vorgenommen als auch die entsprechenden Literaturdatenbanken definiert. Der linksbündige Flattersatz ist für die Ausgabe des Literaturverzeichnisses sehr empfohlen. Für die korrekte Silbentrennugn sorgt das Paket \package{ragged2e}.},label={lst:bibliographie}]{LaTeX-Header/bibliographie}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für die Einbindung von Quellcodebeispielen.]\textbf{\LaTeX{}-Präambel für die Einbindung von Quellcodebeispielen.} Aufgrund der zahlreichen Einstellungsmöglichkeiten ist die Präambel zur Handhabung von Quellcodebeispielen die ausführlichste in diesem Dokument. Nur ein Teil der Möglichkeiten wird hier genutzt, für weitere Informationen sei auf die Dokumentation zum Paket \package{listings} verwiesen.},label={lst:listings}]{LaTeX-Header/listings}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für die Handhabung von Abkürzungen\\ und das Abkürzungsverzeichnis.]\textbf{\LaTeX{}-Präambel für die Handhabung von Abkürzungen und das Abkürzungsverzeichnis.} Diese Präambel ist äußerst kurz, aus Gründen der Modularität und weil nicht in jeder Arbeit ein Abkürzungsverzeichnis verwendet werden wird, ist sie aber in eine eigene Datei ausgelagert worden.},label={lst:abkuerzungen}]{LaTeX-Header/abkuerzungen}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für die Definition der Daten auf der Titelseite.]\textbf{\LaTeX{}-Präambel für die Definition der Daten auf der Titelseite.} Die eigentliche Titelseite wird ihrerseits einfach nur als erste Datei in das Dokument eingebunden, aber nicht verändert. Alle inhaltlichen Einstellungen finden in der Präambel statt. Die hier in der Präambel eingegebenen Metadaten wie Autor und Titel finden dann auch Verwendung beim Laden des Paketes \package{hyperref}.},label={lst:titelseite}]{LaTeX-Header/titelseite}
+
+
+\lstinputlisting[style=latex-appendix,firstline=13,caption={[\LaTeX{}-Präambel für das Paket \package{hyperref}.]\LaTeX{}-Präambel für das Paket \package{hyperref}. Das Paket \package{hyperref} sollte \emph{ganz am Ende} der Präambel geladen werden. Insbesondere sollten die Definitionen für die Titelseite vorher geladen werden, da Teile dieser Informationen in die Metadaten des PDF-Dokuments übernommen werden.},label={lst:hyperref}]{LaTeX-Header/hyperref}
+

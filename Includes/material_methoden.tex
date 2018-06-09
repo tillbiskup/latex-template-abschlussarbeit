@@ -2,12 +2,92 @@
 % an der Fakultät für Chemie und Pharmazie
 % der Albert-Ludwigs-Universität Freiburg
 %
-% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
-% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
 %
 % Jegliche Nutzung auf eigene Verantwortung.
 %
 % Copyright (c) 2018, Till Biskup
 
 \chapter{Materialien und Methoden}
+\label{ch:material_methoden}
 
+Das Kapitel \enquote{Materialien und Methoden} ist häufig der Ort, an dem sich diverse Tabellen finden, weshalb hier als Beispiel Tab.~\ref{tab:beispiel} gezeigt werden soll. Diese Tabelle ist mit Hilfe der vom Paket \package{booktabs} zur Verfügung gestellten Befehle für die horizontalen Linien gesetzt worden. Zur Erinnerung: Tabellen und Abbildungen, aus die auf dem Text nicht verwiesen werden, haben keine Daseinsberechtigung. Darüber hinaus sollten in Tabellen in wissenschaftlichen Arbeiten \emph{niemals} vertikale Linien auftreten.
+
+
+\begin{table}[b]
+\caption[Tabellen haben eine Überschrift, keine Unterschrift.]{\textbf{Tabellen haben eine Überschrift, keine Unterschrift.} Dank der exzellenten Konfigurationsoptionen des KOMA-Script-Pakets lässt sich das allerdings komfortabel global definieren, so dass der Abstand unterhalb der Tabellenüberschrift zur Tabelle korrekt ist. Tabellen sollten niemals vertikale und nur wenige horizontale Linien enthalten. Details finden sich in der Dokumentation zum Paket \texttt{booktabs}.}
+\begin{center}
+\label{tab:beispiel}
+\begin{tabular}{@{\extracolsep{0ex}}ll@{\extracolsep{0ex}}}
+\toprule
+bla & blub
+\\
+\midrule
+foo & bar
+\\
+baz & bla
+\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\section{Verwendete Software}
+
+
+Für dieses Dokument wird eine normale \LaTeX{}-Installation vorausgesetzt. Welche Pakete im Einzelnen geladen werden, kann den Listings in Anhang~\ref{ch:anhang-header} ab Seite~\pageref{ch:anhang-header} entnommen werden. Dort finden sich auch ein paar weitere Hinweise und Begründungen für die Wahl gewisser Pakete und Einstellungen.
+
+Darüber hinaus gibt es keine besonderen Anforderungen an die verwendete Hard- und Software. Wer mag, kann für die Kompilierung des Dokuments bzw. die Aktualisierung des Literaturverzeichnisses auf das mitgelieferte \filename{Makefile} zurückgreifen.
+
+
+\section{Befehle für die Titelseite}
+
+Die Titelseite einer Abschlussarbeit an der Fakultät für Chemie und Pharmazie der Albert-Ludwigs-Universität Freiburg muss gewisse formale Kriterien erfüllen, was die Angaben und deren Formatierung angeht.
+
+Um den Nutzern der Vorlage hier Arbeit abzunehmen, wurde die Titelseite allgemein definiert, lediglich die veränderlichen Daten wie Name und Titel der Arbeit müssen in der zugehörigen Präambel-Datei \filename{titelseite.tex} (vgl. Listing~\ref{lst:titelseite}, S.~\pageref{lst:titelseite}) geändert werden. Die zugehörigen Befehle sind in Tab.~\ref{tab:titelseite} aufgelistet und erklärt. Die Universität kann nicht über einen Befehl geändert werden, da es sich bei der Vorlage um das spezifische Layout der Albert-Ludwigs-Universität Freiburg handelt. Anpassungen für andere Universitäten sind natürlich möglich, erfordern aber vermutlich größere Eingriffe in das generelle Layout der Titelseite.
+
+
+
+
+\begin{table}[b]
+\caption[Befehle für Angaben auf der Titelseite.]{\textbf{Befehle für Angaben auf der Titelseite.} Die eigentliche Titelseite ist von ihrer Formatierung vorgegeben, lediglich die veränderlichen Angaben müssen durch die in dieser Tabelle aufgelisteten Befehle angepasst werden. Alle Befehle sind in der Datei \filename{titelseite.tex} (vgl. Listing~\ref{lst:titelseite}, S.~\pageref{lst:titelseite}) im Verzeichnis \filename{LaTeX-Header} definiert und werden in der Präambel des Hauptdokuments eingebunden.}
+\begin{center}
+\label{tab:titelseite}
+\begin{tabular}{@{\extracolsep{0ex}}ll@{\extracolsep{0ex}}}
+\toprule
+Befehl               & Bedeutung bzw. Inhalt
+\\
+\midrule
+\command{Titel}      & Titel der Arbeit
+\\
+\command{Typ}        & z.B. \enquote{Bachelorarbeit}, \enquote{Masterarbeit}
+\\
+\command{Grad}       & akademischer Grad, z.B. \enquote{Bachelor of Science}
+\\
+\command{Fach}       & in der Regel \enquote{Chemie}
+\\
+\command{Fakultaet}  & \enquote{Fakultät für Chemie und Pharmazie}
+\\
+\command{Name}       & Name der Autorin bzw. des Autors
+\\
+\command{Geburtsort} & Geburtsort der Autorin bzw. des Autors
+\\
+\command{Jahr}       & Jahr der Einreichung der Arbeit
+\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+%\newcommand*{\Titel}{\LaTeX{} für Naturwissenschaftler:\\ Ansprechender Text- und Formelsatz\\ von Abschlussarbeiten}
+%\newcommand*{\Typ}{Bachelorarbeit}
+%\newcommand*{\Grad}{Bachelor of Science}
+%\newcommand*{\Fach}{Chemie}
+%\newcommand*{\Fakultaet}{Fakultät für Chemie und Pharmazie}
+%\newcommand*{\Name}{Hans Wurst}
+%\newcommand*{\Geburtsort}{Hintertupfingen}
+%\newcommand*{\Jahr}{2018}

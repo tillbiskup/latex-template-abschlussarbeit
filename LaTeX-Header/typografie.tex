@@ -2,8 +2,9 @@
 % an der Fakultät für Chemie und Pharmazie
 % der Albert-Ludwigs-Universität Freiburg
 %
-% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
-% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
 %
 % Jegliche Nutzung auf eigene Verantwortung.
 %
@@ -27,5 +28,25 @@
 %% Zeilenabstand erhöhen
 \usepackage{setspace}
 \setstretch{1.1}               % geringfügig erhöhter Zeilenabstand
-%\AfterTOCHead{\singlespacing} % vom KOMA-Script-Autor empfohlen, hier ignoriert
+%\AfterTOCHead{\singlespacing} % vom KOMA-Script-Autor empfohlen,
+                               % hier aber ignoriert
 \KOMAoptions{DIV=last}         % WICHTIG: Satzspiegel neu berechnen
+
+%% Korrekter Satz von Zahlen und Einheiten
+\usepackage{siunitx}
+
+% Komma als Dezimaltrennzeichen im Text (unabhängig von der Eingabe)
+\sisetup{output-decimal-marker={,}}
+
+%% Logische Textauszeichnung
+% fremdsprachige Begriffe kursiv
+\newcommand*{\foreign}[1]{\emph{#1}}
+
+% LaTeX-Paketnamen in Schreibmaschinenschrift (dicktengleich)
+\newcommand*{\package}[1]{\texttt{#1}}
+
+% (LaTeX-)Befehle in Schreibmaschinenschrift (dicktengleich)
+\newcommand*{\command}[1]{\texttt{#1}}
+
+% Datei- und Verzeichnisnamen in Schreibmaschinenschrift
+\newcommand*{\filename}[1]{\texttt{#1}}

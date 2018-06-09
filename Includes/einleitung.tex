@@ -2,69 +2,43 @@
 % an der Fakultät für Chemie und Pharmazie
 % der Albert-Ludwigs-Universität Freiburg
 %
-% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl typografischen
-% Ansprüchen ansatzweise gerecht zu werden als auch nutzbar zu sein.
+% Diese Vorlage ist lediglich ein Vorschlag, der versucht, sowohl
+% typografischen Ansprüchen ansatzweise gerecht zu werden als auch
+% nutzbar zu sein.
 %
 % Jegliche Nutzung auf eigene Verantwortung.
 %
 % Copyright (c) 2018, Till Biskup
 
 \chapter{Einleitung}
+\label{ch:einleitung}
 
-Dieses Dokument dient aktuell als Versuchsobjekt, um mittels der KOMA-Script-Klasse \texttt{scrreprt} ein Layout zu verwirklichen, das sich für Bachelor- und Masterarbeiten zunächst einmal in der Fakultät für Chemie und Pharmazie der Albert-Ludwigs-Universität Freiburg oder noch konkreter im Institut für Physikalische Chemie eben jener Fakultät eignet.
+Das von Leslie Lamport in den 1980er Jahren auf der Basis von \TeX{} \cite{knut-bams-1-337} entwickelte Textsatzsystem \LaTeX{} \cite{kopka-h-2000} erfreut sich nicht zuletzt wegen seiner herausragenden Fähigkeiten zum mathematischen Formelsatz einer großen Beliebtheit insbesondere in den physikalisch orientierten Wissenschaften. Für viele Studierende in der Physikalischen Chemie ist die Bachelorarbeit der erste Anlass, sich mit \LaTeX{} auseinanderzusetzen, und auch wenn es gute Dokumentationen und online verfügbare Hilfsmittel gibt, tauchen immer wieder ähnliche Fragen auf.
 
-Der Autor dieser Vorlage ist kein Typograf, dafür aber ein langjähriger passionierter Nutzer von \LaTeX{}, der mit dieser Vorlage seine ersten systematischen Gehversuche bei der Verwendung der KOMA-Script-Klassen macht. Das Dokument entstand parallel zum Kurs \enquote{\LaTeX{} für Naturwissenschaftler: Ansprechender Text- und Formelsatz von Abschlussarbeiten}, den der Autor erstmalig im Sommersemester 2018 gab.
 
-Mitunter ist es sehr hilfreich, einen Überblick über grundsätzliche Parameter und Größen des Satzspiegels zu haben, insbesondere die Zeilenbreite, die einerseits von diversen Einstellungen bis hin zur Schriftgröße abhängt, andererseits aber für die Erstellung von Abbildungen, die unskaliert eingefügt werden sollen, relevant ist. Das Paket \texttt{layouts} stellt hierfür einen entsprechenden Befehl zur Verfügung, dessen Ausgabe nachfolgend wiedergegeben wird.
+\section{Ziel dieser Arbeit}
 
-\begin{center}
-\printinunitsof{mm}
-\paragraphvalues
-\end{center}
+Aus eigener langjähriger Erfahrung, u.a. als Betreuer diverser Abschlussarbeiten, entstand die Idee, im Rahmen eines Einführungskurses in den Textsatz mit \LaTeX{} eine Vorlage für Abschlussarbeiten zu entwickeln, die sich zumindest für Bachelor- und Masterarbeiten eignet und den Studierenden weitestgehend die Aufgabe abnimmt, sich um das Layout zu kümmern, und ihnen stattdessen erlaubt, sich auf die Inhalte ihrer Abschlussarbeit zu fokussieren.
+
+Das Ergebnis dieser Bemühungen ist das vorliegende Dokument, das als Versuchsobjekt dient, um mittels der KOMA-Script-Klasse \package{scrreprt} \cite{kohm-m-2014} ein Layout zu verwirklichen, das sich für Bachelor- und Masterarbeiten zunächst einmal in der Fakultät für Chemie und Pharmazie der Albert-Ludwigs-Universität Freiburg oder noch konkreter im Institut für Physikalische Chemie eben jener Fakultät eignet.
+
+Der Autor dieser Vorlage ist kein Typograf, dafür aber ein langjähriger passionierter Nutzer von \LaTeX{}, der mit dieser Vorlage seine ersten systematischen Gehversuche bei der Verwendung der KOMA-Script-Klassen macht. Das Dokument entstand parallel zum Kurs \enquote{\href{https://www.till-biskup.de/de/lehre/latex/index}{\LaTeX{} für Naturwissenschaftler: Ansprechender Text- und Formelsatz von Abschlussarbeiten}}, den der Autor erstmalig im Sommersemester 2018 gab. Die Folien zum Kurs sowie weiterführende Informationen finden sich auf der Webseite zum Kurs: \url{https://www.till-biskup.de/de/lehre/latex/index}.
 
 Nun stellt sich natürlich schon die Frage, warum man denn das Layout einer Abschlussarbeit nicht den betreffenden Kandidatinnen und Kandidaten selbst überlässt. Die Antwort ist mehrgeteilt. Zum Einen ist diese Vorlage, ebenso wie der Kurs, in dessen Kontext sie entstanden ist, lediglich ein Angebot und ein Ausgangspunkt für die eigene Beschäftigung mit \LaTeX{} und seinen Möglichkeiten. Zum Anderen tauchen aus der Erfahrung immer wieder die gleichen Probleme auf, und auch wenn diese Vorlage fern davon ist, die eine gültige Lösung zu präsentieren, so müht sie sich doch, \emph{eine} gangbare Lösung aufzuzeigen, die aus typografischen Gesichtspunkten zumindest vertretbar ist. Dabei werden durchaus Kompromisse eingegangen, insbesondere was Zeilenbreite (eher breit) und Zeilenabstand (leicht vergrößert) angeht, die mit Sicherheit nicht dem Ideal der Typografie für Bücher entsprechen.
 
-Sollte das Projekt erfolgreich sein und alle wesentlichen Aspekte, die in einer typischen Bachelor- und Masterarbeit auftreten, abdecken, wird es vermutlich am Ende in der einen oder anderen Art zur Verfügung gestellt. Wer es dann als \enquote{Rundum-Sorglos-Paket} verwenden möchte, ohne dabei nachzudenken, ist für sein eigenes Unglück verantwortlich. Eingedenk der eigenen Erfahrung, dass derlei Vorlagen ein gewisses Eigenleben entwickeln, sobald sie in irgendeiner Form zur Verfügung gestellt werden, ist in die Erstellung dieses Dokuments eine gewisse Sorgfalt geflossen. Trotzdem übernimmt sein Autor keinerlei Garantie für irgendwelche Ergebnisse oder Folgen.
+
+\section{Hinweise zum Umgang}
+
+Die \LaTeX{}-Quellen, die diesem Dokument zugrunde liegen, sind auf mehrere Dateien und Verzeichnisse aufgeteilt und geben in Grundzügen die Gliederung einer typischen Abschlussarbeit in der Physikalischen Chemie wieder. Entsprechend können die Quellen direkt als Vorlage für die eigene Abschlussarbeit dienen, die Inhalte (wie der Text dieser Einleitung) werden dann natürlich durch eigene Inhalte ersetzt.
+
+Gleichzeitig erscheint es dem Autor aber sinnvoll, eine originale Kopie der Quellen dieses Dokuments zur Verfügung zu haben, da in den einzelnen Kapiteln durchaus ernst zu nehmende Beispiele für bestimmte, immer wiederkehrende Aspekte des Textsatzes auftauchen, sei es die Einbindung von Abbildungen und Tabellen oder der mathematische Formelsatz.
+
+Letztlich ist \LaTeX{} ziemlich kulant, was die Formatierung des Quelltextes eines Dokuments angeht. Trotzdem sollte auch der Quelltext so übersichtlich wie möglich formatiert werden, zumal er häufiger gelesen als geschrieben wird.
+
+Zumindest momentan ersetzt dieses Dokument in keiner Weise die Inhalte und Folien des Kurses, in dessen Rahmen es entstand. Trotz diverser Hinweise meist zu Beginn der jeweiligen Kapitel sollte man es entsprechend nicht als eine Verschriftlichung der Kursunterlagen verstehen. Weiterhin sind die Beispiele für bestimmte Aspekte des Textsatzes momentan auch noch recht dürftig, hier ist in Zukunft ggf. mit einer deutlichen Erweiterung zu rechnen.
 
 
-\section{Abschnitt}
+\section{Verfügbarkeit}
 
-\lipsum[1-2]
+Sollte das Projekt erfolgreich sein und alle wesentlichen Aspekte, die in einer typischen Bachelor- und Masterarbeit auftreten, abdecken, wird es am Ende in der einen oder anderen Art zur Verfügung gestellt. Wer es dann als \enquote{Rundum-Sorglos-Paket} verwenden möchte, ohne dabei nachzudenken, ist für sein eigenes Unglück verantwortlich. Eingedenk der eigenen Erfahrung, dass derlei Vorlagen ein gewisses Eigenleben entwickeln, sobald sie in irgendeiner Form zur Verfügung gestellt werden, ist in die Erstellung dieses Dokuments eine gewisse Sorgfalt geflossen. Trotzdem übernimmt sein Autor keinerlei Garantie für irgendwelche Ergebnisse oder Folgen.
 
-\begin{figure}[t]
-%\setcaphanging
-\begin{center}
-\includegraphics{unilogo}
-\end{center}
-\caption[Abbildungen haben immer eine Bildunterschrift.]{\textbf{Abbildungen haben immer eine Bildunterschrift.} Außerdem ist es hilfreich, wenn die Bildunterschrift die Abbildung soweit erklärt, dass der geneigte Leser nicht erst noch große Teile des Textes lesen muss, um sie zu verstehen. Kurz: Abbildungen sollten gemeinsam mit ihrer Unterschrift für sich stehen.}
-\label{fig:beispiel}
-\end{figure}
-
-\lipsum[3-4]
-
-
-\section{Weiterer Abschnitt}
-
-\begin{table}[b]
-\caption[Tabellen haben eine Überschrift, keine Unterschrift.]{\textbf{Tabellen haben eine Überschrift, keine Unterschrift.} Dank der exzellenten Konfigurationsoptionen des KOMA-Script-Pakets lässt sich das allerdings komfortabel global definieren, so dass der Abstand unterhalb der Tabellenüberschrift zur Tabelle korrekt ist. Tabellen sollten niemals vertikale und nur wenige horizontale Linien enthalten. Details finden sich in der Dokumentation zum Paket \texttt{booktabs}.}
-\label{tab:beispiel}
-\begin{tabular}{@{\extracolsep{0ex}}ll@{\extracolsep{0ex}}}
-\toprule
-bla & blub
-\\
-\midrule
-foo & bar
-\\
-baz & bla
-\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\lipsum[5-8]
-
-\cite{knut-bams-1-337}
-
-\lipsum[9-13]
-
-\cite{kohm-m-2014,kopka-h-2000,wittgenstein-l-1963}
