@@ -56,13 +56,20 @@ Um den Nutzern der Vorlage hier Arbeit abzunehmen, wurde die Titelseite allgemei
 \caption[Befehle für Angaben auf der Titelseite.]{\textbf{Befehle für Angaben auf der Titelseite.} Die eigentliche Titelseite ist von ihrer Formatierung vorgegeben, lediglich die veränderlichen Angaben müssen durch die in dieser Tabelle aufgelisteten Befehle angepasst werden. Alle Befehle sind in der Datei \filename{titelseite.tex} (vgl. Listing~\ref{lst:titelseite}, S.~\pageref{lst:titelseite}) im Verzeichnis \filename{LaTeX-Header} definiert und werden in der Präambel des Hauptdokuments eingebunden.}
 \begin{center}
 \label{tab:titelseite}
-\begin{tabular}{@{\extracolsep{0ex}}ll@{\extracolsep{0ex}}}
+\begin{tabular}{@{\extracolsep{0ex}}l@{\hspace{2em}}l@{\extracolsep{0ex}}}
 \toprule
 Befehl               & Bedeutung bzw. Inhalt
 \\
 \midrule
 \command{Titel}      & Titel der Arbeit
 \\
+\command{Name}       & Name der Autorin bzw. des Autors
+\\
+\command{Geburtsort} & Geburtsort der Autorin bzw. des Autors
+\\
+\command{Jahr}       & Jahr der Einreichung der Arbeit
+\\
+\midrule
 \command{Typ}        & z.B. \enquote{Bachelorarbeit}, \enquote{Masterarbeit}
 \\
 \command{Grad}       & akademischer Grad, z.B. \enquote{Bachelor of Science}
@@ -70,12 +77,6 @@ Befehl               & Bedeutung bzw. Inhalt
 \command{Fach}       & in der Regel \enquote{Chemie}
 \\
 \command{Fakultaet}  & \enquote{Fakultät für Chemie und Pharmazie}
-\\
-\command{Name}       & Name der Autorin bzw. des Autors
-\\
-\command{Geburtsort} & Geburtsort der Autorin bzw. des Autors
-\\
-\command{Jahr}       & Jahr der Einreichung der Arbeit
 \\
 \bottomrule
 \end{tabular}
