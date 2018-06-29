@@ -82,3 +82,27 @@ Befehl               & Bedeutung bzw. Inhalt
 \end{tabular}
 \end{center}
 \end{table}
+
+
+\clearpage
+
+
+\section{Beispiele für das Einbinden von Quellcode}
+
+\begin{lstlisting}[language=Python,caption={[Standard-Darstellung mit Sprachoption \enquote{Python}.]Standard-Darstellung mit Sprachoption \enquote{Python}. Bis auf die Sprache (und damit die Hervorhebung der Schlüsselwörter) entspricht die Darstellung dem, was in der entsprechenden \LaTeX-Headerdatei allgemein für Quellcode-Listings vorgegeben wurde.}]
+def hello():
+    """Print "Hello World" and return None"""
+    print("Hello World")
+
+# main program
+hello()
+\end{lstlisting}
+
+\begin{lstlisting}[style=python-idle-code,caption={[Darstellung mit Stiloption \enquote{python-idle-code}.]Standard-Darstellung mit Stiloption \enquote{python-idle-code}. Die Darstellung lehnt sich an die Farbgebung der IDE \enquote{IDLE} an. Eine solche farbige Darstellung kann die Übersicht erleichtern, ist aber für überwiegend nicht farbig gedruckte Texte nicht immer optimal. Die zusätzlichen Zeilennummern lassen sich bei Bedarf natürlich ausschalten.}]
+def hello():
+    """Print "Hello World" and return None"""
+    print("Hello World")
+
+# main program
+hello()
+\end{lstlisting}
