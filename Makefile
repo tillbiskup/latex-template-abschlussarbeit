@@ -2,9 +2,9 @@
 # Convenient to take care of bibliography via biber
 
 # Copyright (c) 2018, Till Biskup
-# 2018-06-09
+# 2018-06-17
 
-LATEXBASEFILE = vorlage-abschlussarbeit
+LATEXBASEFILE = BSc-WurstHans
 
 pdf:
 	pdflatex $(LATEXBASEFILE)
