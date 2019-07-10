@@ -17,8 +17,8 @@ bib:
 
 graphics:
 	( \
-	  cd Abbildungen/eigene;	\
-	  python3 *.py;	\
+	  cd Abbildungen/eigene; \
+	  python3 *.py; \
 	)
 
 clean:
