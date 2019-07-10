@@ -15,7 +15,9 @@
 
 %% lmodern-Schrift
 % alternativ: cm-super-Paket (nicht immer existent)
-\usepackage{lmodern}
+\ifPDFTeX
+  \usepackage{lmodern}
+\fi
 
 %% Anführungszeichen sprachabhängig und "intelligent"
 \usepackage[autostyle]{csquotes}
@@ -38,9 +40,14 @@
 
 %% Korrekter Satz von Zahlen und Einheiten
 \usepackage{siunitx}
+\sisetup{
+  locale=DE,
+  strict,
+  list-final-separator = { und },
+  list-pair-separator = { und },
+  range-phrase = { bis }
+}
 
-% Komma als Dezimaltrennzeichen im Text (unabhängig von der Eingabe)
-\sisetup{output-decimal-marker={,}}
 
 %% Logische Textauszeichnung
 % fremdsprachige Begriffe kursiv

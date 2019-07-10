@@ -12,24 +12,45 @@
 
 %% Mathematischer Formelsatz
 \usepackage{amsmath}
+\ifPDFTeX
+\else
+  \usepackage{unicode-math}
+\fi  
+
 
 % Vektoren: fett, kursiv
-\usepackage{bm}
-\renewcommand*{\vec}[1]{\bm{#1}}
+\ifPDFTeX
+  \usepackage{bm}
+  \renewcommand*{\vec}[1]{\bm{#1}}
+\else
+  \AtBeginDocument{\renewcommand*{\vec}[1]{\symbfit{#1}}}
+\fi
 
 % Tensoren: serifenlos, fett, kursiv
-\DeclareMathAlphabet{\mathbfsf}{\encodingdefault}{\sfdefault}{bx}{sl}
-\newcommand*{\tens}[1]{\mathbfsf{#1}}
+\ifPDFTeX
+  \DeclareMathAlphabet{\mathbfsf}{\encodingdefault}{\sfdefault}{bx}{sl}
+  \newcommand*{\tens}[1]{\mathbfsf{#1}}
+\else
+  \newcommand*{\tens}[1]{\symbfsfit{#1}}
+\fi	
 
 % Differentialoperator: aufrecht
-\newcommand*{\diff}{\mathrm{d}}
+\ifPDFTeX
+  \newcommand*{\upd}{\mathrm{d}}
+\else
+  \newcommand*{\upd}{\symup{d}}
+\fi
 
 % mathematische Konstanten: aufrecht
-\newcommand*{\im}{\mathrm{i}}
-\newcommand*{\e}{\mathrm{e}}
-
-% für das aufrechte kleine pi: \uppi
-\usepackage[Symbolsmallscale]{upgreek}
+\ifPDFTeX
+  \newcommand*{\upe}{\mathrm{e}}
+  \newcommand*{\upi}{\mathrm{i}}
+  \usepackage[Symbolsmallscale]{upgreek}
+\else
+  \newcommand*{\upe}{\symup{e}}
+  \newcommand*{\upi}{\symup{i}}
+  \newcommand{\uppi}{\symup{\pi}}
+\fi
 
 % Operatoren mit Dach
 \newcommand*{\op}[1]{\hat{#1}}

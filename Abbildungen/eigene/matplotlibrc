@@ -1,0 +1,15 @@
+# Es wäre sinnvoller diese Einstellungen unter einem Stil abzuspeichern.
+# Der Speicherort des Stiles wäre ~/.config/matplotlib/<NameDesStils>.mplstyle.
+# Einen Stil kann man mit
+# >>> import matplotlib.pyplot as plt
+# >>> plt.style.use('NameDesStils')
+# laden.
+
+text.usetex : True
+text.latex.unicode : True
+axes.formatter.use_locale : True
+xtick.direction : in
+ytick.direction : in
+legend.frameon : False
+savefig.bbox : tight
+

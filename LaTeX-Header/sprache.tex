@@ -10,9 +10,21 @@
 %
 % Copyright (c) 2018, Till Biskup
 
+\usepackage{iftex}
+
 %% Zeichen- und Schriftkodierung
-\usepackage[utf8]{inputenc}    % Zeichenkodierung für das Dokument
-\usepackage[T1]{fontenc}       % Schriftkodierung
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}    % Zeichenkodierung für das Dokument
+  \usepackage[T1]{fontenc}       % Schriftkodierung
+\else
+  \usepackage{fontspec}
+\fi
 
 %% Sprachunterstützung
-\usepackage[ngerman]{babel}    % deutsche Sprache, neue Rechtschreibung
+\ifPDFTeX
+  \usepackage[ngerman]{babel}    % deutsche Sprache, neue Rechtschreibung
+\else
+  \usepackage{polyglossia}
+  \setmainlanguage{german}
+  \setotherlanguage{english}
+\fi
