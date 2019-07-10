@@ -15,6 +15,12 @@ bib:
 	pdflatex $(LATEXBASEFILE)
 	pdflatex $(LATEXBASEFILE)
 
+graphics:
+	( \
+	  cd Abbildungen/eigene;	\
+	  python3 *.py;	\
+	)
+
 clean:
 	rm -f *aux *lo? *xml *out *toc *bbl *bcf *blg *.mtc* *maf
 	rm -f Includes/*aux
