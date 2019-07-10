@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import IPython
 try:
+    import IPython
     IPython.get_ipython().magic('reset -sf')
-except AttributeError:
+except ImportError:
     pass
 
 import numpy as np
@@ -18,4 +18,3 @@ ax.set_ylabel(r'\textit{Größe} / Einheit')
 fig.savefig("Grafik.pdf")
 fig.savefig("Grafik.pgf")
 fig.savefig("Grafik.svg")
-
