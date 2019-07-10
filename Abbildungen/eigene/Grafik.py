@@ -1,12 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-try:
-    import IPython
-    IPython.get_ipython().magic('reset -sf')
-except ImportError:
-    pass
-
 import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
